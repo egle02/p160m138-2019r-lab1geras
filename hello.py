@@ -1,8 +1,8 @@
 from sys import argv
-name=argv
-name = argv[1]
+greeted_name=argv
+greeted_name = argv[1]
 
-def greet(name: str):     
- return f"Hello, {name}!"
-name1=greet(name)
+def greet(greeted_name: str):     
+ return f"Hello, {greeted_name}!"
+name1=greet(greeted_name)
 print (name1)
