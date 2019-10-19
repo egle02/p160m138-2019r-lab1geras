@@ -1,8 +1,16 @@
-from sys import argv
- greeted_name =argv
- greeted_name = argv[1]
+import sys
 
-def greet( greeted_name: str):     
- return f"Hello, { greeted_name}!"
-name1=greet( greeted_name)
-print (name1)
+
+def greet(greeted_name: str, shout_count: int = 1):
+    return f"Hello, {greeted_name}{shout_count * '!'}"
+
+
+if __name__ == '__main__':
+    n = 1
+    if len(sys.argv) == 3:
+        n = int(sys.argv[2])
+
+    te = greet(sys.argv[1], n)
+    print(te)
+
+
